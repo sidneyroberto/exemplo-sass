@@ -5,7 +5,7 @@ Para compilar as folhas de estilo Sass, é preciso antes instalar o Sass:
 
 ### `npm i -g sass`
 
-Após, abra um terminar na pasta raíz do projeto e execute o comando abaixo para 
+Após, abra um terminal na pasta raíz do projeto e execute o comando abaixo para 
 compilar as folhas de estilo Sass e gerar a folha de estilo em CSS puro:
 
 ### `sass --watch css/estilos.scss css/estilos.css`
