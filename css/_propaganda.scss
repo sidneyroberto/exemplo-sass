@@ -1,0 +1,169 @@
+@import 'keyframes';
+
+@mixin rotacionar($keyframe, $duracao) {
+    animation: $keyframe $duracao infinite linear;
+}
+
+@mixin deslizar($keyframe, $duracao) {
+    animation: $keyframe $duracao;
+}
+
+.propaganda {
+    display: table;
+    padding: 20px;
+    opacity: 0.1;
+    transition: 1s;
+    background-color: #f5f5f5;
+    margin: 5px;
+    margin-bottom: 10px;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    .imagem,
+    .texto {
+        display: table-cell;
+        width: 50%;
+        vertical-align: middle;
+    }
+
+    .imagem {
+        text-align: center;
+        padding: 10px;
+
+        img {
+            width: 70%;
+        }
+    }
+
+    .texto {
+        text-align: right;
+        font-size: 200%;
+        padding-right: 50px;
+    }
+
+    #sobMedida {
+        position: relative;
+        left: -1000px;
+        @include deslizar(deslizagemEsquerda, 1s);
+        opacity: 0;
+        transition: opacity 1s, transform 1s;
+    }
+
+    &:hover #sobMedida {
+        @include deslizar(deslizagemDireita, 1s);
+        left: 0px;
+        opacity: 1;
+    }
+
+    #engrenagem1 {
+        width: 40%;
+        @include rotacionar(rotacao1, 30s);
+    }
+
+    #engrenagem2 {
+        width: 30%;
+        vertical-align: -30px;
+        @include rotacionar(rotacao2, 24s);
+    }
+
+    &:hover #engrenagem1 {
+        @include rotacionar(rotacao1, 10s);
+    }
+
+    &:hover #engrenagem2 {
+        @include rotacionar(rotacao2, 6s);
+    }
+
+    #html5,
+    #css3,
+    #javascript {
+        position: relative;
+        width: 30%;
+        left: -1000px;
+        opacity: 0;
+        transition: opacity 1s, transform 1s;
+    }
+
+    #html5 {
+        @include deslizar(deslizagemEsquerda, 1s);
+    }
+
+    #css3 {
+        @include deslizar(deslizagemEsquerda, 1.5s);
+    }
+
+    #javascript {
+        @include deslizar(deslizagemEsquerda, 2s);
+    }
+
+    &:hover #html5,
+    &:hover #css3,
+    &:hover #javascript {
+        opacity: 1;
+        left: 0px;
+    }
+
+    &:hover #html5 {
+        @include deslizar(deslizagemParaBaixo, 1s);
+    }
+
+    &:hover #css3 {
+        @include deslizar(deslizagemParaBaixo, 1.5s);
+    }
+
+    &:hover #javascript {
+        @include deslizar(deslizagemParaBaixo, 2s);
+    }
+
+    .painelTime {
+        display: table;
+    }
+
+    .membro {
+        width: 20%;
+        display: table-cell;
+        text-align: center;
+        padding: 20px;
+        opacity: 0;
+        animation: desaparecer 1s;
+        opacity: 0;
+        transition: opacity 1s, transform 1s;
+
+        img {
+            width: 80%;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-family: "montserrat";
+            margin: 0px;
+            font-size: 120%;
+        }
+    }
+
+    &:hover .membro {
+        animation: aparecer 3s forwards;
+    }
+
+    &:hover #ceo {
+        animation-delay: 0s;
+    }
+
+    &:hover #diretorArte {
+        animation-delay: 1s;
+    }
+
+    &:hover #dev {
+        animation-delay: 2s;
+    }
+
+    #tituloTime {
+        display: block;
+        text-align: center;
+        font-size: 250%;
+        padding: 20px;
+    }
+}

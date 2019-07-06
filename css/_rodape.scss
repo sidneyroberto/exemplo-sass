@@ -1,0 +1,75 @@
+.rodape {
+    width: 100%;
+    display: table;
+    padding: 40px 0px 80px 0px;
+    background-color: black;
+    color: white;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    img {
+        -webkit-filter: brightness(0) invert(1);
+    }
+
+    .blocoInformacoes {
+        padding: 20px;
+        display: table-cell;
+        font-family: "montserrat";
+    }
+
+    #marca {
+        font-family: "montserrat bold";
+        font-size: 120%;
+
+        a:hover {
+            color: var(--cor-hover-link);
+        }
+    }
+
+    #titulo {
+        font-family: "montserrat bold";
+        font-size: 120%;
+
+        img {
+            width: 24px;
+        }
+    }
+
+    #endereco {
+        padding-top: 10px;
+
+        p {
+            margin: 3px;
+        }
+    }
+
+    #iconeEndereco:hover {
+        -webkit-filter: brightness(1) invert(0);
+    }
+
+    #contato {
+        padding-top: 10px;
+
+        img {
+            width: 24px;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+    }
+
+    .blocoContato {
+        display: block;
+        margin: 10px;
+
+        &:hover img {
+            -webkit-filter: brightness(1) invert(0);
+        }
+
+        &:hover a {
+            color: var(--cor-hover-link);
+        }
+    }
+}

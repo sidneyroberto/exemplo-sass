@@ -1,0 +1,44 @@
+.menu {
+    background-color: black;
+    padding: 20px;
+    font-family: "montserrat bold";
+
+    a {
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            color: $cor-hover-link;
+        }
+    }
+
+    #titulo {
+        font-size: 130%;
+        font-weight: bold;
+    }
+}
+
+.menuDesktop {
+    list-style-type: none;
+    display: inline;
+
+    li {
+        display: inline;
+        margin-right: 20px;
+    }
+}
+
+.menuResponsivo {
+    display: none;
+    list-style-type: none;
+
+    li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    img {
+        width: 30px;
+        vertical-align: middle;
+    }
+}

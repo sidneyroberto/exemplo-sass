@@ -1,0 +1,118 @@
+@media only screen and (max-width: 600px) {
+
+    .menu,
+    .hero,
+    .propaganda,
+    .painelTime,
+    .membro,
+    .rodape {
+        display: block;
+    }
+
+    .menu {
+        #titulo {
+            font-size: 100%;
+        }
+
+        li {
+            font-size: 70%;
+            margin-right: 20px;
+        }
+    }
+
+    .menuDesktop {
+        display: none;
+    }
+
+    .menuResponsivo {
+        display: inline;
+
+        li {
+            float: right;
+        }
+    }
+
+    .hero {
+        height: 200px;
+
+        .texto {
+            padding: 0px 2px;
+            border: 2px solid white;
+
+            h1 {
+                font-size: 250%;
+                font-family: "montserrat";
+            }
+
+            p {
+                font-size: 130%;
+            }
+        }
+    }
+
+    .propaganda {
+        opacity: 1;
+        padding: 5px;
+
+        .imagem,
+        .texto {
+            margin: auto;
+            display: block !important;
+            width: 90% !important;
+        }
+
+        .texto {
+            padding: 0px;
+
+            p {
+                text-align: center !important;
+            }
+        }
+
+        #sobMedida,
+        #html5,
+        #css3,
+        #javascript,
+        #ceo,
+        #diretorArte,
+        #dev {
+            opacity: 1;
+            animation: none !important;
+            left: 0px;
+        }
+
+        #html5,
+        #css3,
+        #javascript {
+            top: 0px;
+        }
+
+        .membro {
+            display: block !important;
+            width: 100% !important;
+            margin-right: 0px;
+            padding: 0px;
+            margin-bottom: 40px;
+
+            img {
+                width: 50%;
+            }
+        }
+    }
+
+    .blocoInformacoes {
+        display: block !important;
+        width: 100% !important;
+        text-align: center;
+        padding: 0px !important;
+    }
+
+    .rodape {
+
+        #iconeEndereco,
+        .blocoContato img {
+            -webkit-filter: none;
+        }
+    }
+
+}
